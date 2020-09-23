@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Javascript from File Introduction</title>
+
+    <style>
+        .makeRed {
+            color: red;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+
+        .show {
+            visibility: visible;
+        }
+    </style>
+
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <button type="button" onclick='changeLine1Style()'>Go</button>
+    <p id="cLine1">Lorem ipsum dolor sit amet, consectur adipiscing elit.</p>
+
+    <button type="button" onclick='changeStyle("cLine2", "hide")'>Hide this</button>
+    <button type="button" onclick='changeStyle("cLine2", "show")'>Show this</button>
+    <p id="cLine2">Lorem ipsum dolor sit amet, consectur adipiscing elit. Lorem ipsum dolor sit amet, consectur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectur adipiscing elit.</p>
+</body>
+
+</html>

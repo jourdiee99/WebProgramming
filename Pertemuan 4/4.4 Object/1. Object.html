@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Object</title>
+    <script>
+        var person = { email: "ayam@gmail.com", NIM: " 535180084", nama: "Jrd", age: 21 };
+
+        function LoadObject() {
+            document.getElementById("iPerson").value =
+                "Email: " + person.email + " " +
+                "NIM: " + person.NIM + " " +
+                "Nama: " + person.nama;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick='LoadObject()'>Load</button>
+    <input type="text" id="iPerson" style="width: 550px"; readonly />
+
+</body>
+</html>

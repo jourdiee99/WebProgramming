@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Multielement Introduction</title>
+
+    <style>
+        .makeRed {
+            color: red;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+
+        .show {
+            visibility: visible;
+        }
+    </style>
+
+    <script>
+            function changeAll(str) {
+                document.getElementById("cLine1").innerHTML = str;
+                document.getElementById("cLine2").innerHTML = str;
+                document.getElementById("cLine1").className = "makeRed";
+                document.getElementById("cLine2").className = "makeRed";
+            }
+    </script>
+</head>
+
+<body>
+    <p id="cLine1">Lorem ipsum dolor sit amet, consectur adipiscing elit.</p>
+
+    <p id="cLine2">Lorem ipsum dolor sit amet, consectur adipiscing elit. Lorem ipsum dolor sit amet, consectur adipiscing elit.</p>
+
+    <button type="button" onclick='changeAll("hello world")'>Change All</button>
+</body>
+
+</html>

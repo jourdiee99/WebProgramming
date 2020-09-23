@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Javascript Invocation Pattern</title>
+
+    <script>
+            var person = {
+                email: "",
+                nim: "",
+                nama:"",
+                hobbies:[],
+
+                addBio: function(pEmail, pNim, pNama){ // method
+                    this.email = pEmail;
+                    this.nim = pNim;
+                    this.nama =pNama;
+                },
+
+                addHobby: function(pHobby){ //method
+                    this.hobbies.push(pHobby);
+                },
+
+                write: function() { //method
+                    var str = "Bio: " + this.email + ", " + this.nim + ", " + this.nama;
+                    var hobb = "hobbies: ";
+                    var item;
+                    for (item of this.hobbies) {
+                        hobb += item + " ";
+                    }
+                    return str + " " + hobb;
+                }
+            }
+
+            function addBioInfo(pEmail, pNim, pNama) {
+                person.addBio(pEmail, pNim, pNama);
+            }
+
+            function addHobby(pHobby){
+                person.addHobby(pHobby);
+            }
+
+            function loadObject(){
+                document.getElementById("oRes").innerHTML = person.write();
+            }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="iEmail" placeholder="masukkan email">
+    <input type="text" id="iNim" placeholder="masukkan nim">
+    <input type="text" id="iNama" placeholder="masukkan nama">
+
+    <button type="button" onclick='addBioInfo(document.getElementById("iEmail").value, document.getElementById("iNim").value, document.getElementById("iNama").value)'>Add Bio Info</button>
+
+    <input type="text" id="iHobby" placeholder="add your hobby" style="width: 500px">
+    <button type="button" onclick='person.addHobby(document.getElementById("iHobby").value)'>Add</button>
+
+    <br><br>
+
+    <button type="button" onclick='loadObject()'>Load</button>
+
+    <br><br>
+
+    <div id="oRes"></div>
+</body>
+
+</html>

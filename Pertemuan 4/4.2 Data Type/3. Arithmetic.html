@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript DataType</title>
+
+    <script>
+        function add(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) + Number(inp2);
+        }
+        function sub(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) - Number(inp2);
+        }
+        function multi(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) * Number(inp2);
+        }
+        function div(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) / Number(inp2);
+        }
+        function power(id, inp1, inp2) {
+            document.getElementById(id).value = Math.pow(inp1, inp2);
+        }
+        function mod(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) % Number(inp2);
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="iNumAdd1" /> +
+    <input type="number" id="iNumAdd2" />
+    <button type="button" onclick='add("tambah", document.getElementById("iNumAdd1").value, document.getElementById("iNumAdd2").value)'>=</button>
+    <input type="number" id="tambah" readonly />
+    <br /> <br />
+
+    <input type="number" id="iNumSub1" /> -
+    <input type="number" id="iNumSub2" />
+    <button type="button" onclick='sub("kurang", document.getElementById("iNumSub1").value, document.getElementById("iNumSub2").value)'>=</button>
+    <input type="number" id="kurang" readonly />
+    <br /> <br />
+
+    <input type="number" id="iNumMul1" /> *
+    <input type="number" id="iNumMul2" />
+    <button type="button" onclick='multi("kali", document.getElementById("iNumMul1").value, document.getElementById("iNumMul2").value)'>=</button>
+    <input type="number" id="kali" readonly />
+    <br /> <br />
+
+    <input type="number" id="iNumDiv1" /> /
+    <input type="number" id="iNumDiv2" />
+    <button type="button" onclick='div("bagi", document.getElementById("iNumDiv1").value, document.getElementById("iNumDiv2").value)'>=</button>
+    <input type="number" id="bagi" readonly />
+    <br /> <br />
+
+    <input type="number" id="iNumPow1" /> ^
+    <input type="number" id="iNumPow2" />
+    <button type="button" onclick='power("pangkat", document.getElementById("iNumPow1").value, document.getElementById("iNumPow2").value)'>=</button>
+    <input type="number" id="pangkat" readonly />
+    <br /> <br />
+
+    <input type="number" id="iNumMod1" /> %
+    <input type="number" id="iNumMod2" />
+    <button type="button" onclick='mod("mod", document.getElementById("iNumMod1").value, document.getElementById("iNumMod2").value)'>=</button>
+    <input type="number" id="mod" readonly />
+</body>
+</html>

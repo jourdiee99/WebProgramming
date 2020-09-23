@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Browser Log Introduction</title>
+
+    <style>
+        .makeRed {
+            color: red;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+
+        .show {
+            visibility: visible;
+        }
+    </style>
+
+    <script>
+            function changeStyle(pid, pclassname){
+                console.log(pid);
+                console.log(pclassname);
+                document.getElementById(pid).className = pclassname;
+            }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick='changeStyle("cLine1", "makeRed")'>Go</button>
+    <p id="cLine1">Lorem ipsum dolor sit amet, consectur adipiscing elit. Lorem ipsum dolor sit amet, consectur adipiscing elit.</p>
+</body>
+
+</html>

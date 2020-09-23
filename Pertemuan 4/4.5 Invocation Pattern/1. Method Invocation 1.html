@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Javascript Invocation Pattern</title>
+
+    <script>
+            var obj = {
+                value: 0,
+                increment: function() { //method
+                    this.value +=1;
+                }
+            };
+
+            function increaseValue(){
+                obj.increment;
+            }
+
+            function show(){
+                document.getElementById("oRes").innerHTML = obj.value;
+            }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick='obj.increment()'>increase</button> <!-- obj.increase adalah method invocation -->
+
+    <br>
+
+    <button type="button" onclick='show()'>show</button>
+    <p id="oRes"></p>
+</body>
+
+</html>

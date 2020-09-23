@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Javascript Invocation Pattern</title>
+
+    <script>
+            var obj = {};
+
+            obj.add = function(val1, val2){
+                var inner = function () {
+                    this.sum = val1 + val2;
+                }
+
+                inner(); // func invocation
+            }
+
+            function show() {
+                document.getElementById("oResult").innerHTML = obj.sum;
+            }
+    </script>
+</head>
+
+<body>
+
+    <button type="button" onclick='obj.add(2, 4)'>addition</button>
+
+    <br><br>
+
+    <button type="button" onclick='show()'>show</button>
+    <p id="oResult"></p>
+</body>
+
+</html>
